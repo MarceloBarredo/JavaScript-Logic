@@ -1,6 +1,33 @@
+// EJERCICIO 5: Función que invierta el orden de las palabras de una cadena de texto y cada uno de sus caracteres. Devolver la cadena invertida.
+
+const reverseString = (string) => {
+
+    //Metodo 1: 
+    // if (!string) console.warn("No ingresaste ninguna cadena de texto")
+    // else {
+    //     let invertedChain = string.split("").reverse().join("")
+    //     console.info(invertedChain) 
+    // }
+
+    //Metodo 2:
+    if (!string) console.warn("No ingresaste ninguna cadena de texto")
+    else {
+        let invertedChain = []
+        for (let i = string.length - 1; i >= 0; i--) {
+            // console.info(string[i])
+            invertedChain.push(string[i])
+        }
+        console.info(invertedChain.join(""))
+    }
+}
+
+// reverseString();
+// reverseString("Hola, mi nombre es Marcelo")
+
+
 // EJERCICIO 4: Función que repita una cadena de texto la cantidad de veces que sea especificada.
 
-let repeatString = (string = "", repeater) => {
+const repeatString = (string = "", repeater) => {
     if (!string) console.warn("No ingresaste ninguna cadena de texto")
     else if (repeater === 0) console.warn("La cantidad de veces a repetir no puede ser 0")
     else if (Math.sign(repeater) === -1) console.warn("La cantidad de veces a repetir no puede ser negativa")
@@ -9,18 +36,18 @@ let repeatString = (string = "", repeater) => {
     else console.info(`La cadena de texto "${string}" es repetida ${repeater} veces y su resultado es: ${string.repeat(repeater)}`)
 }
 
-// repeatString()
-// repeatString("Hola a todos ")
-// repeatString("Hola a todos ", "a")
-// repeatString("Hola a todos ", -1)
-// repeatString("Hola a todos ", 0)
-// repeatString("Hola a todos ", 4)
+// repeatString();
+// repeatString("Hola a todos ");
+// repeatString("Hola a todos ", "a");
+// repeatString("Hola a todos ", -1);
+// repeatString("Hola a todos ", 0);
+// repeatString("Hola a todos ", 4);
 
 
 
 // EJERCICIO 3: Función que a partir de una cadena de texto, devuelva el texto recortado segun el número de caracteres especificada.
 
-let cutString = (string = "", length) => {
+const cutString = (string = "", length) => {
     (!string)
     ? console.warn("No ingresaste ninguna cadena de texto")
     : (!length)
@@ -37,7 +64,7 @@ let cutString = (string = "", length) => {
 // EJERCICIO 2: Función que a partir de una cadena de texto, devuelva un arreglo de textos separados por dicho caracter.
 // Ej: Input: function("Hola que tal ?", "") --> ["Hola", "que", "tal", "?"]
 
-let splitString = (string = "", spliter) => {
+const splitString = (string = "", spliter) => {
     (!string)
     ? console.warn("No ingresaste ninguna cadena de texto")
     : console.info(string.split(spliter))
@@ -63,7 +90,7 @@ function countCharacters(string = "") {
 // countCharacters("Hola, mi nombre es Marcelo Barredo");
 
 // Función Expresada
-let countCharacters2 = (string = "") => {
+const countCharacters2 = (string = "") => {
     (!string) 
     ? console.warn("No ingresaste ninguna cadena de texto") 
     : console.info(`La cadena de texto "${string}" contiene ${string.length} caracteres.`)
