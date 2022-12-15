@@ -1,18 +1,20 @@
 // EJERCICIO 4: Función que repita una cadena de texto la cantidad de veces que sea especificada.
 
 let repeatString = (string = "", repeater) => {
-    (!string)
-    ? console.warn("No ingresaste ninguna cadena de texto")
-    : (!repeater || !Number.isInteger(repeater))
-        ? console.warn("No ingresaste ninguna cantidad para repetir la cadena de texto, o el valor ingresado no es un número")
-        : console.info(`La cadena de texto "${string}" es repetida ${repeater} veces y su resultado es: ${string.repeat(repeater)}`)
+    if (!string) console.warn("No ingresaste ninguna cadena de texto")
+    else if (repeater === 0) console.warn("La cantidad de veces a repetir no puede ser 0")
+    else if (Math.sign(repeater) === -1) console.warn("La cantidad de veces a repetir no puede ser negativa")
+    else if (!repeater) console.warn("No ingresaste ninguna cantidad para repetir la cadena de texto")
+    else if (!Number.isInteger(repeater)) console.warn("El valor ingresado no es un número")
+    else console.info(`La cadena de texto "${string}" es repetida ${repeater} veces y su resultado es: ${string.repeat(repeater)}`)
 }
 
-repeatString()
-repeatString("Hola a todos ")
-repeatString("Hola a todos ", "a")
-repeatString("Hola a todos ", 4)
-
+// repeatString()
+// repeatString("Hola a todos ")
+// repeatString("Hola a todos ", "a")
+// repeatString("Hola a todos ", -1)
+// repeatString("Hola a todos ", 0)
+// repeatString("Hola a todos ", 4)
 
 
 
