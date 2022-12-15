@@ -1,3 +1,26 @@
+// EJERCICIO 7: Función que determina si una palabra o frase es palíndroma (que se puede leer igual de izquierda a derecha o derecha a izquierda).
+
+const palindromeValidator = (string) => {
+    if (!string) console.warn("No ingresaste ninguna palabra o cadena de texto")
+    else {
+        let normalString = string.toLowerCase()
+        let invertedString = normalString.split("").reverse().join("")
+
+        return (normalString === invertedString)
+        ? console.info(`La palabra/frase "${normalString}" es palíndroma`)
+        : console.info(`La palabra/frase "${normalString}" NO es palíndroma`)
+        
+    }
+}
+
+// palindromeValidator();
+// palindromeValidator("salas");
+// palindromeValidator("bathroom");
+// palindromeValidator("Hoy es un hermoso dia")
+// palindromeValidator("Cinco menos cinco")
+
+
+
 // EJERCICIO 6: Función que determine la cantidad de veces que una palabra se repite en una cadena de texto, independientemente de su longitud, no debe ser case-sensitive.
 
 const repeatedWord = (string, word) => {
@@ -25,11 +48,11 @@ const repeatedWord = (string, word) => {
     }
 }
 
-repeatedWord();
-repeatedWord("Hola mundo");
-repeatedWord("Hola mundo", "hello");
-repeatedWord("Hola mundo, en que bello mundo estamos", "Mundo");
-repeatedWord("Hola mundo, en que bello mundo estamos", "mundo");
+// repeatedWord();
+// repeatedWord("Hola mundo");
+// repeatedWord("Hola mundo", "hello");
+// repeatedWord("Hola mundo, en que bello mundo estamos", "Mundo");
+// repeatedWord("Hola mundo, en que bello mundo estamos", "mundo");
 
 
 
