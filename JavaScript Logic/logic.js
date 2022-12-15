@@ -1,4 +1,4 @@
-// EJERCICIO 6: Función que determine la cantidad de veces que una palabra se repite en una cadena de texto, independientemente de su longitud.
+// EJERCICIO 6: Función que determine la cantidad de veces que una palabra se repite en una cadena de texto, independientemente de su longitud, no debe ser case-sensitive.
 
 const repeatedWord = (string, word) => {
     if (!string) console.warn("No ingresaste ninguna cadena de texto")
@@ -9,7 +9,7 @@ const repeatedWord = (string, word) => {
         let count = 0
         
         while(index !== -1) {
-            index = string.indexOf(word, index) 
+            index = string.toLowerCase().indexOf(word.toLowerCase(), index) 
             if (index !== -1) {
                 index++;
                 count++;
@@ -28,6 +28,7 @@ const repeatedWord = (string, word) => {
 repeatedWord();
 repeatedWord("Hola mundo");
 repeatedWord("Hola mundo", "hello");
+repeatedWord("Hola mundo, en que bello mundo estamos", "Mundo");
 repeatedWord("Hola mundo, en que bello mundo estamos", "mundo");
 
 
