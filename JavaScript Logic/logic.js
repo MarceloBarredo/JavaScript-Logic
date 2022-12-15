@@ -1,3 +1,37 @@
+// EJERCICIO 6: Función que determine la cantidad de veces que una palabra se repite en una cadena de texto, independientemente de su longitud.
+
+const repeatedWord = (string, word) => {
+    if (!string) console.warn("No ingresaste ninguna cadena de texto")
+    else if (!word) console.warn("Ingresar por lo menos una palabra para su busqueda")
+    else if (typeof word !== 'string') console.warn("Solo se permiten caracteres validos")
+    else {
+        let index = 0
+        let count = 0
+        
+        while(index !== -1) {
+            index = string.indexOf(word, index) 
+            if (index !== -1) {
+                index++;
+                count++;
+            }
+        }
+
+        console.info(
+            (count) 
+            ? `La palabra "${word}" aparece en ${count} oportunidad/es`
+            : `La palabra "${word}" no aparece en la cadena de texto`
+        )
+
+    }
+}
+
+repeatedWord();
+repeatedWord("Hola mundo");
+repeatedWord("Hola mundo", "hello");
+repeatedWord("Hola mundo, en que bello mundo estamos", "mundo");
+
+
+
 // EJERCICIO 5: Función que invierta el orden de las palabras de una cadena de texto y cada uno de sus caracteres. Devolver la cadena invertida.
 
 const reverseString = (string) => {
