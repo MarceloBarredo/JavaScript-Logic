@@ -1,3 +1,20 @@
+// EJERCICIO 8: Función que elimina un patrón de texto, de una cadena de texto.
+
+const deletePattern = (string, pattern) => {
+    if (!string) console.warn("No ingresaste ninguna palabra o cadena de texto")
+    else if (!pattern) console.warn("No ingresaste ningún patrón a evaluar")
+    else {
+        console.info(string.replace(new RegExp(pattern,"ig"), ""))
+    }
+}
+
+// deletePattern();
+// deletePattern("xyz1 xyz2 xyz3 xyz4 xyz5 xyz6");
+// deletePattern("xyz1 xyz2 xyz3 xyz4 xyz5 xyz6", "xyz");
+// deletePattern("El perro se metio en su casa", "perro");
+
+
+
 // EJERCICIO 7: Función que determina si una palabra o frase es palíndroma (que se puede leer igual de izquierda a derecha o derecha a izquierda).
 
 const palindromeValidator = (string) => {
