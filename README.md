@@ -1,5 +1,6 @@
 # JavaScript-Logic
 
+<p> Ejercicio 12 : Función que recibe un número entero positivo y determina si este es primo o no. Un numero primero es aquel que solo es divisible por si mismo y 1. </p>
 <p> Ejercicio 11 : Función que recibe un número y debe calcular su factorial. </p>
 <p> Ejercicio 10 : Función que recibe un número y evalua si este es capicúa o no (que se lee igual en un sentido y en el otro). </p>
 <p> Ejercicio 9 : Función que genera un numero aleatorio entre cierto rango de valores dados, ambos extremos incluidos. </p>

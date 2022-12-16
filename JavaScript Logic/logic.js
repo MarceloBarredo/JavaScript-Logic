@@ -1,3 +1,37 @@
+// EJERCICIO 12 : Función que recibe un número entero positivo y determina si este es primo o no. Un numero primero es aquel que solo es divisible por si mismo y 1.
+
+const isPrime = (number) => {
+    if (!number) console.warn(`Debe ingresar por lo menos un valor númerico entero positivo, mayor a 0.`)
+    else if (typeof number !== "number") console.warn(`El valor "${number}" no es número entero positivo`)
+    else if (!Number.isInteger(number)) console.warn (`El valor "${number}" no es entero positivo`)
+    else if (Math.sign(number) !== 1 || number < 2) console.warn("Debe ingresar un número entero positivo mayor a 2")
+    else {
+        let boolean = true
+
+        for (let i = 2; i < number; i++) {
+            if (number % i === 0) {
+                boolean = false 
+                break;
+            }         
+        }
+
+        return (boolean)
+        ? console.info(`El número ${number} SI es primo`)
+        : console.info(`El número ${number} NO es primo`)
+    }
+}
+
+// isPrime();
+// isPrime("a");
+// isPrime(12.5);
+// isPrime(1);
+// isPrime(2)
+// isPrime(3)
+// isPrime(77)
+// isPrime(97)
+
+
+
 // EJERCICIO 11 : Función que recibe un número y debe calcular su factorial desde 1 hasta "n" valor.
 
 const factorial = (number) => {
