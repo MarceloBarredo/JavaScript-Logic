@@ -1,18 +1,41 @@
+// EJERCICIO 10 : Función que recibe un número entero y evalua si este es capicúa o no (que se lee igual en un sentido y en el otro).
+
+const palindromicNumber = (number) => {
+    if (!number) console.warn("Debes ingresar por lo menos un número a evaluar")
+    else if (typeof number !== "number") console.warn(`El valor "${number}" no es un número válido`)
+    else if (!Number.isInteger(number)) console.warn("El número debe ser entero")
+    else {
+        let invertedNumber = parseFloat(number.toString().split("").reverse().join(""))
+
+        if (number === invertedNumber) console.info(`El número ${number} es capicúa`)
+        else console.info(`El número ${number} lamentablemente no es capicúa`)
+            
+    }
+}
+
+// palindromicNumber();
+// palindromicNumber(50.5);
+// palindromicNumber(101);
+// palindromicNumber(152);
+// palindromicNumber("a");
+
+
+
 // EJERCICIO 9 : Función que genera un numero aleatorio entre cierto rango de valores dados, ambos extremos incluidos.
 
 const generateRandomRangedValue = (minRange, maxRange) => {
     if (!minRange || !Number.isInteger(minRange)) console.warn("Debes ingresar por lo menos un valor de rango mínimo y debe ser numérico.")
     else if (!maxRange || !Number.isInteger(maxRange)) console.warn("Debes ingresar por lo menos un valor de rango máximo y debe ser numérico.")
     else {
-        console.log(Math.floor(Math.random() * (maxRange - minRange + 1) + minRange))
+        console.log(`El número generado aleatoriamente es: ${Math.floor(Math.random() * (maxRange - minRange + 1) + minRange)}`)
     }
 }
 
-generateRandomRangedValue();
-generateRandomRangedValue(50);
-generateRandomRangedValue("a",65);
-generateRandomRangedValue(10,15);
-generateRandomRangedValue(1000,1300);
+// generateRandomRangedValue();
+// generateRandomRangedValue(50);
+// generateRandomRangedValue("a",65);
+// generateRandomRangedValue(10,15);
+// generateRandomRangedValue(1000,1300);
 
 
 
