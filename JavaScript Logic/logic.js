@@ -1,3 +1,21 @@
+// EJERCICIO 9 : Función que genera un numero aleatorio entre cierto rango de valores dados, ambos extremos incluidos.
+
+const generateRandomRangedValue = (minRange, maxRange) => {
+    if (!minRange || !Number.isInteger(minRange)) console.warn("Debes ingresar por lo menos un valor de rango mínimo y debe ser numérico.")
+    else if (!maxRange || !Number.isInteger(maxRange)) console.warn("Debes ingresar por lo menos un valor de rango máximo y debe ser numérico.")
+    else {
+        console.log(Math.floor(Math.random() * (maxRange - minRange + 1) + minRange))
+    }
+}
+
+generateRandomRangedValue();
+generateRandomRangedValue(50);
+generateRandomRangedValue("a",65);
+generateRandomRangedValue(10,15);
+generateRandomRangedValue(1000,1300);
+
+
+
 // EJERCICIO 8: Función que elimina un patrón de texto, de una cadena de texto.
 
 const deletePattern = (string, pattern) => {
