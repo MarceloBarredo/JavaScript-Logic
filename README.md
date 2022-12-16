@@ -1,5 +1,6 @@
 # JavaScript-Logic
 
+<p> Ejercicio 13 : Función que recibe un número y determina si es par o impar. </p>
 <p> Ejercicio 12 : Función que recibe un número entero positivo y determina si este es primo o no. Un numero primero es aquel que solo es divisible por si mismo y 1. </p>
 <p> Ejercicio 11 : Función que recibe un número y debe calcular su factorial. </p>
 <p> Ejercicio 10 : Función que recibe un número y evalua si este es capicúa o no (que se lee igual en un sentido y en el otro). </p>

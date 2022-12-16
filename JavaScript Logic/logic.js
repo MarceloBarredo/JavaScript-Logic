@@ -1,3 +1,28 @@
+// EJERCICIO 13 : Función que recibe un número y determina si es par o impar.
+
+const isOddOrPair = (number) => {
+    if (!number) console.warn(`Debe ingresar por lo menos un valor númerico, distinto de 0`)
+    else if (typeof number !== "number") console.warn(`El valor "${number}" no es número`)
+    else {
+        return (number % 2 === 0)
+        ? console.info(`El número ${number} es PAR`)
+        : console.info(`El número ${number} es IMPAR`)
+    }
+}
+
+isOddOrPair();
+isOddOrPair("a");
+isOddOrPair(-3);
+isOddOrPair(-2);
+isOddOrPair(-1);
+isOddOrPair(0);
+isOddOrPair(1);
+isOddOrPair(2);
+isOddOrPair(3);
+
+
+
+
 // EJERCICIO 12 : Función que recibe un número entero positivo y determina si este es primo o no. Un numero primero es aquel que solo es divisible por si mismo y 1.
 
 const isPrime = (number) => {
