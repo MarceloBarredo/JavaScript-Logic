@@ -1,3 +1,45 @@
+// EJERCICIO 11 : Función que recibe un número y debe calcular su factorial desde 1 hasta "n" valor.
+
+const factorial = (number) => {
+    if (!number) console.warn(`Debe ingresar por lo menos un valor númerico entero positivo, mayor a 0.`)
+    else if (typeof number !== "number") console.warn(`El valor "${number}" no es número positivo`)
+    else if (!Number.isInteger(number)) console.warn (`El valor "${number}" no es entero positivo`)
+    else if (Math.sign(number) !== 1) console.warn("No es posible calcular el factorial de un número negativo o igual a 0")
+    else {
+
+        // // Metodo 1:
+        // let indexNumber = 1
+        // let accumulator = 1
+
+        // while (indexNumber < number) {
+        //     accumulator = accumulator * (indexNumber + 1)
+        //     indexNumber++
+        // }
+
+        // console.info(accumulator)
+
+        //Metodo 2:
+        let accumulator = 1
+
+        for (let i = 1; i <= number; i++) {
+            accumulator *= i
+            
+        }
+
+        console.info(`El factorial de ${number} es: ${accumulator}`)
+    }
+}
+
+// factorial();
+// factorial("abc");
+// factorial(15.5);
+// factorial(-3);
+// factorial(0);
+// factorial(5);
+// factorial(8);
+
+
+
 // EJERCICIO 10 : Función que recibe un número entero y evalua si este es capicúa o no (que se lee igual en un sentido y en el otro).
 
 const palindromicNumber = (number) => {
