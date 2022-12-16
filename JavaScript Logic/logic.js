@@ -1,3 +1,18 @@
+// EJERCICIO 14 : Función que convierte una temperatura en grados Celsius a Farenheit y viceversa.
+
+const convertTemp = (temp, scale) => {
+    if (!temp && temp !== 0) console.warn(`Debe ingresar por lo menos una temperatura`)
+    else if (scale.toUpperCase() === "C") console.info((temp * (9/5)) + 32)
+    else if (scale.toUpperCase() === "F") console.info((temp - 32) * (5/9))
+}
+
+// convertTemp();
+// convertTemp(0, "C")
+// convertTemp(40, "C")
+// convertTemp(32, "F")
+// convertTemp(68, "F")
+
+
 // EJERCICIO 13 : Función que recibe un número y determina si es par o impar.
 
 const isOddOrPair = (number) => {
@@ -10,16 +25,15 @@ const isOddOrPair = (number) => {
     }
 }
 
-isOddOrPair();
-isOddOrPair("a");
-isOddOrPair(-3);
-isOddOrPair(-2);
-isOddOrPair(-1);
-isOddOrPair(0);
-isOddOrPair(1);
-isOddOrPair(2);
-isOddOrPair(3);
-
+// isOddOrPair();
+// isOddOrPair("a");
+// isOddOrPair(-3);
+// isOddOrPair(-2);
+// isOddOrPair(-1);
+// isOddOrPair(0);
+// isOddOrPair(1);
+// isOddOrPair(2);
+// isOddOrPair(3);
 
 
 
