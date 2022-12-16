@@ -1,5 +1,6 @@
 # JavaScript-Logic
 
+<p> Ejercicio 15 : Función que convierte números de base binaria a decimal y viceversa. </p>
 <p> Ejercicio 14 : Función que convierte una temperatura en grados Celsius a Farenheit y viceversa. </p>
 <p> Ejercicio 13 : Función que recibe un número y determina si es par o impar. </p>
 <p> Ejercicio 12 : Función que recibe un número entero positivo y determina si este es primo o no. Un numero primero es aquel que solo es divisible por si mismo y 1. </p>

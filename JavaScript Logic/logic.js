@@ -1,3 +1,30 @@
+// EJERCICIO 15 : Función que convierte números de base binaria a decimal y viceversa.
+
+const convertBinaryToDecimal = (number = undefined, base = undefined ) => {
+    if (number === undefined ) console.warn(`Debe ingresar por lo menos un valor númerico positivo`)
+    if (base === undefined) console.warn("Debe ingresar una base a convertir")
+    else if (typeof number !== "number") console.warn(`El valor "${number}" no es un número válido`)
+    else if (typeof base !== "number") console.warn(`El valor "${base}" no es una base numérica válida`)
+    else if (base === 2) { //Binario a Decimal
+        console.info(`${number} en base ${base} = ${parseInt(number,base)} en base 10`)
+    }
+    else if (base === 10) { //Decimal a Binario
+        console.info(`${number} en base ${base} = ${number.toString(2)} en base 2`)
+    }
+    else console.warn("El tipo de base a convertir no es válida")
+
+}
+
+// convertBinaryToDecimal();
+// convertBinaryToDecimal(100);
+// convertBinaryToDecimal("a",2);
+// convertBinaryToDecimal(50,"abc");
+// convertBinaryToDecimal(100,2);
+// convertBinaryToDecimal(4,10);
+// convertBinaryToDecimal(4,9);
+
+
+
 // EJERCICIO 14 : Función que convierte una temperatura en grados Celsius a Farenheit y viceversa.
 
 const convertTemp = (temp, scale) => {
