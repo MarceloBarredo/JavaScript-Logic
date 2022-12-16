@@ -4,8 +4,8 @@ const convertTemp = (temp, scale) => {
     if (!temp && temp !== 0) console.warn(`Debe ingresar por lo menos una temperatura`)
     else if (typeof temp !== "number") console.warn(`El valor "${temp}" no es un número válido`)
     else if (!/C|F/.test(scale)) console.warn(`El Valor "${scale}" de escala no es reconocido`)
-    else if (scale.toUpperCase() === "C") console.info((temp * (9/5)) + 32)
-    else if (scale.toUpperCase() === "F") console.info((temp - 32) * (5/9))
+    else if (scale.toUpperCase() === "C") console.info(`${temp}°${scale} = ${(temp * (9/5)) + 32}°F`)
+    else if (scale.toUpperCase() === "F") console.info(`${temp}°${scale} = ${(temp - 32) * (5/9)}°C`)
 }
 
 // convertTemp();
