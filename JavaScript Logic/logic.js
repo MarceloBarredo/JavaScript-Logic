@@ -1,3 +1,29 @@
+// EJERCICIO 17 : Función que determina a partir de una fecha dada, cuantos años han transcurrido hasta la fecha actual o cuantos años faltan para dicha fecha.
+
+const yearsPassed = (date = undefined) => {
+    if (date === undefined) return console.warn(`Debe ingresar por lo menos una fecha`)
+    if (!(date instanceof Date)) return console.error(`${date} no es una fecha válida`) 
+
+    let todayDateInMS = new Date().getTime() //getTime me lo devuelve en milisegundos
+    let diferenceDateInMS = todayDateInMS - (date.getTime())
+    let yearsInMS = 1000 * 60 * 60 * 24 * 365
+
+    let totalYears = Math.floor(diferenceDateInMS / yearsInMS)
+
+    return (Math.sign(totalYears) === -1)
+    ? console.info(`Faltan ${Math.abs(totalYears)} años para la fecha "${date}"`)
+    : console.info(`Transcurrieron ${totalYears} años desde la fecha "${date}" hasta el día de hoy`)
+    
+
+}
+
+// yearsPassed();
+// yearsPassed(55);
+// yearsPassed(new Date(2040, 11, 19)) //Los meses son indexados como los Arrays.
+// yearsPassed(new Date(1992, 11, 19))
+
+
+
 // EJERCICIO 16 : Función que devuelve el costo final despues de aplicar un cierto descuento a una cantidad dada.
 
 const applyDiscount = (cost = undefined, discount = 0) => {
@@ -11,12 +37,12 @@ const applyDiscount = (cost = undefined, discount = 0) => {
 
 }
 
-applyDiscount();
-applyDiscount("a");
-applyDiscount(500, "a");
-applyDiscount(-200, 20);
-applyDiscount(500, -20);
-applyDiscount(500, 10);
+// applyDiscount();
+// applyDiscount("a");
+// applyDiscount(500, "a");
+// applyDiscount(-200, 20);
+// applyDiscount(500, -20);
+// applyDiscount(500, 10);
 
 
 

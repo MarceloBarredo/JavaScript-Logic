@@ -1,5 +1,6 @@
 # JavaScript-Logic
 
+<p> Ejercicio 17 : Función que determina a partir de una fecha dada, cuantos años han transcurrido hasta la fecha actual o cuantos años faltan para dicha fecha. </p>
 <p> Ejercicio 16 : Función que devuelve el costo final despues de aplicar un cierto descuento a una cantidad dada. </p>
 <p> Ejercicio 15 : Función que convierte números de base binaria a decimal y viceversa. </p>
 <p> Ejercicio 14 : Función que convierte una temperatura en grados Celsius a Farenheit y viceversa. </p>
