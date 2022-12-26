@@ -1,3 +1,25 @@
+// EJERCICIO 16 : Función que devuelve el costo final despues de aplicar un cierto descuento a una cantidad dada.
+
+const applyDiscount = (cost = undefined, discount = 0) => {
+    if (cost === undefined) return console.warn(`Debe ingresar por lo menos un valor`)
+    if (cost <= 0) return console.warn(`El valor del producto debe ser mayor y distinto de cero`)
+    if (discount < 0) return console.warn(`El valor del descuento no puede ser menor a cero`)
+    if (typeof cost !== 'number') return console.warn(`"${cost}" no es un valor numérico`)
+    if (typeof discount !== 'number') return console.warn(`"${discount}" no es un valor numérico`)
+
+    return console.info(`El costo del producto es de $${cost} y el descuento a aplicar es del ${discount}%, por lo que el costo final aplicado el descuento será de: $${cost - (cost * discount / 100)}`)
+
+}
+
+applyDiscount();
+applyDiscount("a");
+applyDiscount(500, "a");
+applyDiscount(-200, 20);
+applyDiscount(500, -20);
+applyDiscount(500, 10);
+
+
+
 // EJERCICIO 15 : Función que convierte números de base binaria a decimal y viceversa.
 
 const convertBinaryToDecimal = (number = undefined, base = undefined ) => {

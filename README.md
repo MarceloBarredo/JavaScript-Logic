@@ -1,5 +1,6 @@
 # JavaScript-Logic
 
+<p> Ejercicio 16 : Función que devuelve el costo final despues de aplicar un cierto descuento a una cantidad dada. </p>
 <p> Ejercicio 15 : Función que convierte números de base binaria a decimal y viceversa. </p>
 <p> Ejercicio 14 : Función que convierte una temperatura en grados Celsius a Farenheit y viceversa. </p>
 <p> Ejercicio 13 : Función que recibe un número y determina si es par o impar. </p>
