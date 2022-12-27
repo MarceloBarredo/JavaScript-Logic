@@ -1,3 +1,34 @@
+// EJERCICIO 18 : Función que determina la cantidad de vocales y consonantes en una cadena de texto dada.
+
+const countVowelsAndConsonants = (string = undefined) => {
+    if (string === undefined) return console.warn(`Debe ingresar por lo menos un texto a evaluar`)
+    if (typeof string !== 'string') return console.error(`"${string}" no es una cadena de texto válida`)
+
+    let vowels = 0
+    let consonants = 0
+
+    // Podriamos usar string.toLowerCase() para pasar todo a minuscula y evaluarlo asi. O su operacion inversa toUpperCase().
+
+    for (const character of string) {
+        if (/[AEIOUÜÁÉÍÓÚaeiouáéíóúü]/.test(character)) vowels++;
+        if (/[BCDFGHJKLMNÑPQRSTVWXYZbcdfghjklmnñpqrstvwxyz]/.test(character)) consonants++;
+    }
+
+    console.info({
+        string,
+        vowels,
+        consonants
+    })
+}
+
+// countVowelsAndConsonants();
+// countVowelsAndConsonants(2345);
+// countVowelsAndConsonants("hola mundo");
+// countVowelsAndConsonants("HOLA MUNDO");
+// countVowelsAndConsonants("Mi nombre es Marcelo Alejandro Barredo");
+
+
+
 // EJERCICIO 17 : Función que determina a partir de una fecha dada, cuantos años han transcurrido hasta la fecha actual o cuantos años faltan para dicha fecha.
 
 const yearsPassed = (date = undefined) => {
