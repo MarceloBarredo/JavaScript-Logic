@@ -1,3 +1,31 @@
+// EJERCICIO 19 : Función que determina que un texto es un nombre válido. 
+
+const validateName = (nombre = undefined) => {
+    if (nombre === undefined) return console.warn(`Debe ingresar por lo menos un nombre a evaluar`)
+    if (typeof nombre !== 'string') return console.error(`"${nombre}" no es un nombre válido`)
+
+    // ^ --> Significa que no puede haber nada antes de la expresión a validar.
+    // $ --> Significa que no puede haber nada despues de la expresión a validar.
+    // [] --> Son agrupadores.
+    // + --> Para que lo evalue por cada caracter que posee la cadena de texto.
+    // \s --> Contempla los espacios en blanco.
+    // g --> para que lo evalue en toda la cadena de texto y no solo en la primera coincidencia.
+
+    let regExp = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜú\s]+$/g.test(nombre)
+
+    return (regExp)
+     ? console.info(`"${nombre}", es un nombre válido`)
+     : console.warn(`"${nombre}", NO es un nombre válido`)
+}
+
+// validateName();
+// validateName(123);
+// validateName("Marcelo Barredo");
+// validateName("123456");
+// validateName(true)
+
+
+
 // EJERCICIO 18 : Función que determina la cantidad de vocales y consonantes en una cadena de texto dada.
 
 const countVowelsAndConsonants = (string = undefined) => {

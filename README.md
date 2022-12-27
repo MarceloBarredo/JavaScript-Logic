@@ -1,5 +1,6 @@
 # JavaScript-Logic
 
+<p> Ejercicio 19 : Función que determina que un texto es un nombre válido. </p>
 <p> Ejercicio 18 : Función que determina la cantidad de vocales y consonantes en una cadena de texto dada. </p>
 <p> Ejercicio 17 : Función que determina a partir de una fecha dada, cuantos años han transcurrido hasta la fecha actual o cuantos años faltan para dicha fecha. </p>
 <p> Ejercicio 16 : Función que devuelve el costo final despues de aplicar un cierto descuento a una cantidad dada. </p>
