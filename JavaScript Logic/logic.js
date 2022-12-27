@@ -1,3 +1,32 @@
+// Ejercicio 20 : Función que determina que un texto es un tipo de email válido.
+
+const validateEmail = (email = undefined) => {
+    if (email === undefined) return console.warn(`Debe ingresar por lo menos un email a evaluar`)
+    if (typeof email !== 'string') return console.error(`"${email}" no es un tipo de email válido`)
+
+    let regExp = /[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/i.test(email)
+
+    return (regExp)
+     ? console.info(`"${email}", es un email válido`)
+     : console.warn(`"${email}", NO es un email válido`)
+
+}
+
+// validateEmail();
+// validateEmail([])
+// validateEmail({})
+// validateEmail("")
+// validateEmail(123);
+// validateEmail("Marcelo Barredo");
+// validateEmail("123456");
+// validateEmail(true)
+// validateEmail("marcelo.abarredo@gmail.com")
+// validateEmail("marcelo.abarredo@")
+// validateEmail("@gmail.com")
+// validateEmail("123@gmail.com")
+
+
+
 // EJERCICIO 19 : Función que determina que un texto es un nombre válido. 
 
 const validateName = (nombre = undefined) => {
@@ -19,6 +48,9 @@ const validateName = (nombre = undefined) => {
 }
 
 // validateName();
+// validateName([])
+// validateName({})
+// validateName("")
 // validateName(123);
 // validateName("Marcelo Barredo");
 // validateName("123456");
